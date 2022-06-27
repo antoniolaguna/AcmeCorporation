@@ -1,10 +1,13 @@
+using AcmeCorporationApi.Models;
 using FluentAssertions;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
+using Newtonsoft.Json;
 using System;
 using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -40,6 +43,19 @@ namespace AcmeCorporationApi.IntegrationTest
         {
             var response = await _client.GetAsync("/Persons/99");
             response.StatusCode.Should().Be(HttpStatusCode.NoContent);
+        }
+
+        [Fact]
+        public async Task Post_Test()
+        {
+            var person = new Person();
+            person.Age = 30;
+            person.Document = "12345675B";
+            person.Name = "Antonio";
+            var json = JsonConvert.SerializeObject(person);
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+            var response = await _client.PostAsync("/Persons", data);
+            response.StatusCode.Should().Be(HttpStatusCode.Created);
         }
     }
 }
