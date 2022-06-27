@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31729.503
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcmeCorporationApi", "src\AcmeCorporationApi\AcmeCorporationApi.csproj", "{DC8BB872-DE10-43A4-ADD0-26C7BF741CA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AcmeCorporationApi", "src\AcmeCorporationApi\AcmeCorporationApi.csproj", "{DC8BB872-DE10-43A4-ADD0-26C7BF741CA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcmeCorporationApi.IntegrationTest", "AcmeCorporationApi.IntegrationTest\AcmeCorporationApi.IntegrationTest.csproj", "{A5383247-9864-45E2-A50B-57DFFDAD7C11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{DC8BB872-DE10-43A4-ADD0-26C7BF741CA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC8BB872-DE10-43A4-ADD0-26C7BF741CA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC8BB872-DE10-43A4-ADD0-26C7BF741CA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5383247-9864-45E2-A50B-57DFFDAD7C11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5383247-9864-45E2-A50B-57DFFDAD7C11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5383247-9864-45E2-A50B-57DFFDAD7C11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5383247-9864-45E2-A50B-57DFFDAD7C11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
