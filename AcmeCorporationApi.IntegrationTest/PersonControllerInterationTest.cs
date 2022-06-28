@@ -13,13 +13,13 @@ using Xunit;
 
 namespace AcmeCorporationApi.IntegrationTest
 {
-    public class PersonControllerTest
+    public class PersonControllerIntegrationTest
     {
 
         private readonly TestServer _server;
         private readonly HttpClient _client;
 
-        public PersonControllerTest()
+        public PersonControllerIntegrationTest()
         {
             this._server = new TestServer(WebHost.CreateDefaultBuilder().UseStartup<Startup>());
             this._client = _server.CreateClient();
@@ -48,14 +48,17 @@ namespace AcmeCorporationApi.IntegrationTest
         [Fact]
         public async Task Post_Test()
         {
-            var person = new Person();
+            var person = new PersonDto();
             person.Age = 30;
-            person.Document = "12345675B";
-            person.Name = "Antonio";
+            person.Document = "05709004J";
+            person.Name = "Antonio585485aguffna";
+            person.DocumentType = "DNI";
             var json = JsonConvert.SerializeObject(person);
             var data = new StringContent(json, Encoding.UTF8, "application/json");
             var response = await _client.PostAsync("/Persons", data);
             response.StatusCode.Should().Be(HttpStatusCode.Created);
         }
+
+
     }
 }

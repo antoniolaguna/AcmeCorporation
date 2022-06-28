@@ -6,7 +6,7 @@ namespace AcmeCorporationApi.Models
 {
     public class AcmeCorporationContext : DbContext
     {
-        public virtual DbSet<Person> Persons { get; set; }
+        public virtual DbSet<PersonDto> Persons { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -18,7 +18,7 @@ namespace AcmeCorporationApi.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Person>(entity =>
+            modelBuilder.Entity<PersonDto>(entity =>
             {
                 entity.Property(e => e.Name)
                     .IsRequired()

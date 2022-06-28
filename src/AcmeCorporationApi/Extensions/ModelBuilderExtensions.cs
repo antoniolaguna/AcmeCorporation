@@ -7,15 +7,15 @@ namespace AcmeCorporationApi.Extensions
     {
         public static void Seed(this ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Person>().HasData(
-                new Person
+            modelBuilder.Entity<PersonDto>().HasData(
+                new PersonDto
                 {
                     Id = 1,
                     Name = "Sergio",
                     Age = 45,
                     Document = "59087066C"
                 },
-                new Person
+                new PersonDto
                 {
                     Id = 2,
                     Name = "Carmen",
